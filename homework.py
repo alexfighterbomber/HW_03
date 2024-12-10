@@ -13,10 +13,9 @@ def get_numbers_ticket(min=1, max=36, quantity=5):          # отримання
     if min < 1 or min > max-quantity or quantity > max-min or quantity < 1 or max > 1000 or min > max:
         return "Невірні вхідні дані!"
     numbers = set() #створюємо множину
-    while True:
-        numbers.add(random.randint(min, max)) # додаємо в неї довільні числа 
-        if len(numbers) >= quantity: break    # поки не наберемо кількість quantity
+    while len(numbers) < quantity:
+        numbers.add(random.randint(min, max)) # додаємо в неї довільні числа поки не наберемо кількість quantity
     sorted_numbers = sorted(numbers)          # перетворюємо на сортований список
     return sorted_numbers
 
-and per se and
+print(get_numbers_ticket(1, 50, 10))
