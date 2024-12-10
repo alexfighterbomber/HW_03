@@ -19,3 +19,4 @@ def get_numbers_ticket(min=1, max=36, quantity=5):          # отримання
     sorted_numbers = sorted(numbers)          # перетворюємо на сортований список
     return sorted_numbers
 
+and per se and
